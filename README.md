@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 640 Ko
 
-## Getting Started
+Petit jeu de récolte et de fabrication, développé avec Next.js, React et TypeScript.
 
-First, run the development server:
+Vous incarnez un programme des années 90 qui se réveille sur une machine d'aujourd'hui. Pour s'adapter, il récolte des **fragments** du monde moderne, puis les combine en **modules**, avec une contrainte de son époque : une mémoire minuscule.
+
+> Projet en cours de développement (V1).
+
+## Les règles en bref
+
+1. **La mémoire est limitée** : 16 cases au départ, chaque fragment en occupe 1, 2 ou 3.
+2. **La récolte est un pari** : une récolte rapide est sans risque, une récolte profonde offre de meilleures raretés mais peut corrompre un fragment déjà en mémoire.
+3. **Combiner libère de la place** : une recette consomme des fragments et produit un module qui apporte un bonus permanent.
+
+La partie se termine quand tous les modules sont obtenus. L'interface évolue au fil de la progression, des années 90 à aujourd'hui.
+
+## Technologies
+
+- Next.js (App Router) et React
+- TypeScript
+- Tailwind CSS
+- SQLite avec Prisma
+
+## Installation
 
 ```bash
+git clone <url-du-depot>
+cd 640ko
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Le jeu est ensuite accessible sur http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> La mise en place de la base de données sera détaillée une fois Prisma configuré.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Idées pour une V2
 
-## Learn More
+Les idées hors du périmètre de la V1 sont notées ici :
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- comptes joueurs et authentification
+- placement spatial dans la grille
+- récolte automatique qui continue page fermée
+- zones ou régions à explorer
+- succès, statistiques, classement
+- sons et musique
+- déploiement en ligne (avec une base hébergée, par exemple PostgreSQL)
+- contenu étendu
